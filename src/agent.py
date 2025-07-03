@@ -22,8 +22,6 @@ logging.basicConfig(
     handlers=[logging.StreamHandler()]
 )
 
-# print(raibot("B2", ["up", "up", "right", "right"]))
-
 model = OpenAIModel(
     model_id="gpt-4o",
     params={
@@ -49,7 +47,7 @@ prompt = """
     - the final position of the robot
     - the status message from the raibot tool
     to a file called path.txt using the save_to_txt tool.
-    When a session starts, reset the draft.txt file to an empty file using the clear_file tool.
+    When a session starts, reset the path.txt file to an empty file using the clear_file tool.
 """
 
 agent = Agent(model=model, tools=[raibot, save_to_txt, clear_file], system_prompt=prompt)
