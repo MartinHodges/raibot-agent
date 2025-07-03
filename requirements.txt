@@ -1,0 +1,4 @@
+strands-agents
+strands-agents[openai]
+dotenv
+strands-agents-tools

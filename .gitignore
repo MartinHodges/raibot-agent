@@ -1,0 +1,70 @@
+# Byte-compiled / optimized / dll files
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+*.egg
+*.egg-info/
+
+# Distribution / packaging
+.Python
+build/
+dist/
+develop-eggs/
+eggs/
+*.egg-info/
+sdist/
+var/
+wheels/
+*.whl
+*.zip
+.installed.pkgs
+
+# Specific project environment file
+src/.env
+src/path.txt
+
+# Environments
+.venv/               # Virtual environment directory (common name)
+venv/                # Virtual environment directory (common name)
+env/                 # Virtual environment directory (less common but possible)
+/htmlcov/            # Coverage.py HTML reports
+.tox/                # Tox test automation
+.conda/              # Conda environments (often outside project, but include if inside)
+.pytest_cache/       # Pytest cache directory
+.ruff_cache/         # Ruff cache directory
+
+# Editors and IDEs
+.idea/               # IntelliJ IDEA / PyCharm project files
+.vscode/             # VS Code project files (if not shared)
+*.sublime-project    # Sublime Text project files
+*.sublime-workspace  # Sublime Text workspace files
+.project             # Eclipse project files
+.pydevproject        # PyDev project files
+.vscode-test/        # VS Code extension development
+.DS_Store            # macOS system files
+Thumbs.db            # Windows system files
+
+# Testing, documentation, and data
+.coverage            # Coverage.py data file
+.coverage.* # Additional coverage files
+.cache/              # Generic cache directory
+/htmlcov/            # Coverage.py HTML reports
+*.log                # Log files
+*.sqlite3            # SQLite database files (e.g., Django's default)
+db.sqlite3           # Specific Django default SQLite db
+/media/              # Django media files (if uploaded content)
+/static_collected/   # Django collectstatic output
+
+# Jupyter Notebook / IPython
+.ipynb_checkpoints/  # Jupyter Notebook checkpoints
+*.ipynb_checkpoints  # Older pattern for checkpoints
+profile_default/     # IPython profile directory
+ipython_config.py
+
+# Docker
+.dockerignore        # Often you'll have a separate .dockerignore, but including if only one
+Dockerfile.generated # If Dockerfile is generated
+
+# Misc
+.node
