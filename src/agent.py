@@ -17,7 +17,7 @@ logging.getLogger("httpx").setLevel(logging.WARNING)
 
 # Sets the logging format and streams logs to stderr with minimal output
 logging.basicConfig(
-    level=logging.CRITICAL if not DEBUG else logging.DEBUG,
+    level=logging.WARNING if not DEBUG else logging.DEBUG,
     format="%(levelname)s | %(name)s | %(message)s",
     handlers=[logging.StreamHandler()]
 )

@@ -17,9 +17,7 @@ def clear_file(filename: str) -> str:
 
 @tool
 def save_to_txt(filename: str, start: str, instructions: list[str], final: str, target: str, status_message: str) -> str:
-    
 
-    
     if not filename:
         return "No filename provided for saving."
 

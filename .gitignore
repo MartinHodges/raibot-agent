@@ -23,6 +23,7 @@ wheels/
 # Specific project environment file
 src/.env
 src/path.txt
+path.txt
 
 # Environments
 .venv/               # Virtual environment directory (common name)
