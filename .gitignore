@@ -23,6 +23,7 @@ wheels/
 # Specific project environment file
 src/.env
 src/path.txt
+path.txt
 
 # Environments
 .venv/               # Virtual environment directory (common name)
@@ -51,6 +52,8 @@ Thumbs.db            # Windows system files
 .cache/              # Generic cache directory
 /htmlcov/            # Coverage.py HTML reports
 *.log                # Log files
+logs/*
+data/*               # Temporary data files
 *.sqlite3            # SQLite database files (e.g., Django's default)
 db.sqlite3           # Specific Django default SQLite db
 /media/              # Django media files (if uploaded content)
