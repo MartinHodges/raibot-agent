@@ -4,7 +4,6 @@ from dotenv import load_dotenv
 from pydantic import BaseModel
 from strands import Agent
 from strands.models.openai import OpenAIModel
-from save_tool import save_to_txt, clear_file
 from mcp.client.streamable_http import streamablehttp_client
 from strands.tools.mcp.mcp_client import MCPClient
 import json
@@ -46,18 +45,10 @@ prompt = """
     The robot can move in four directions: up, down, left, and right.
     Given a command from your human operator, you will provide the one word directions only as instructions to the robot
     using the raibot tool. You can find out where the robot is at anytime with the tools you have access to.
-    If the user has given the starting location, tell the tool what it is. Or  from the user's command If known, use the starting position from the Raibot or else use the human's starting position.
+    If you have been given a starting location when a task starts, inform the robot by setting the start location.
     The command may define a final target position expected from following the instructions.
     Do not move the robot if a problem occurs.
-    Create a 5x5 array that shows you where you can go, where you cannot and where you have not yet been.
     Do not combine multiple move commands into one batch of instructions to the raibot_simulator tool.
-    For each batch of instructions, once the raibot_simulator tool has finished moving the robot, save the result along with
-    - the robot's starting position
-    - the instructions you gave it
-    - the final position of the robot
-    - the status message from the raibot tool
-    to a file called path.txt using the save_to_txt tool.
-    When a session starts, reset the path.txt file to an empty file using the clear_file tool.
 """
 
 streamable_http_mcp_client = MCPClient(lambda: streamablehttp_client("http://localhost:3001/mcp"))
